@@ -9,4 +9,11 @@ package vending_pkg;
         ERROR     = 3'b101
     } state_t;
 
+    typedef enum logic [1:0] {
+        CAFE  = 2'b00;
+        AGUA  = 2'b01;
+        SUCO  = 2'b10;
+        SNACK = 2'b11;
+    } item_t;
+
 endpackage
