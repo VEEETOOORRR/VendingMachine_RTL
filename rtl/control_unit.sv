@@ -38,7 +38,7 @@ module control_unit (
     always_ff @(posedge clk) begin
         if (rst || cancel) begin
             state <= IDLE;        
-            troco <= 0;  
+            troco <= 0;
         
         end else begin
             case (state)
@@ -52,7 +52,9 @@ module control_unit (
                 end
 
                 COLLECT: begin
-                    state <= IDLE;
+                    if(coin_in == 2'b00) begin
+                        state <= IDLE;
+                    end
                 end
 
                 CHECK: begin
