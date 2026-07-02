@@ -9,7 +9,7 @@ Djafer Miguel Fernandes Pereira
 
 Módulos implementados:
 
-- [ ] comparator.sv
+- [x] comparator.sv
 - [ ] control_unit.sv
 - [x] credit_reg.sv
 - [x] memory.sv
