@@ -1,12 +1,13 @@
 module credit_reg(
+    // SINAIS VINDOS DO TOP MODULE
     input logic clk,
     input logic rst,
-
-    input logic credit_load,    // Sinal que aciona o registrador
-    input logic op,             // Determina se é pra acumular ou zerar
-    input logic cancel,         // Sinal de cancelamento
-
+    input logic cancel,
     input logic [1:0] coin_in, // Moeda que tá entrando, registrada em reg_coin_in
+
+    // SINAIS DA CONTROL UNIT
+    input logic credit_load,    // Sinal que aciona o registrador
+    input logic credit_op,      // Determina se é pra acumular ou zerar
 
     output logic [7:0] credit // Valor acumulado
 
